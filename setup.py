@@ -31,12 +31,7 @@ from version import __version__  # pylint: disable=g-import-not-at-top
 sys.path.append(os.path.dirname(__file__))
 from required_packages import REQUIRED_PACKAGES  # pylint: disable=g-import-not-at-top, g-bad-import-order
 
-if '--release' in sys.argv:
-  release = True
-  sys.argv.remove('--release')
-else:
-  # Build a nightly package by default.
-  release = False
+release = True
 
 if release:
   project_name = 'tensorflow-probability'
